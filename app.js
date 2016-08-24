@@ -21,7 +21,7 @@ app.controller("QuizCtrl", function ($scope, $sce, $http) {
         }).error(errorhandler);
     };
 
-    $http.get("quiz_library/quiz_choices.json").success(function (response) {
+    $http.get("quiz_choices.json").success(function (response) {
         $scope.quizzes = response;
         $scope.selectedQuiz = $scope.quizzes[0];
         console.log(response);
