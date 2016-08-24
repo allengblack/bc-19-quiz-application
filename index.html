@@ -9,9 +9,10 @@
 </head>
 <body ng-app="quiz-app">
 
-<div ng-controller="QuizCtrl">
+<p ng-controller="QuizCtrl">
     <h1>Hello!</h1>
     <p>Welcome to the Quiz App. </p>
+    <p>Select a quiz from the list below</p>
     <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes"></select>
     <div>
         <p>{{selectedQuiz.title}}</p>
@@ -23,3 +24,4 @@
 <script src="app.js"></script>
 </body>
 </html>
+
