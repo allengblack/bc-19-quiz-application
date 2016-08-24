@@ -2,7 +2,6 @@
  * Created by g-man on 8/24/16.
  */
 
-
 function errorhandler (err, obj) {
     //a global error handler
     console.error(err, obj);
@@ -23,7 +22,7 @@ app.controller("QuizCtrl", function ($scope, $sce, $http) {
 
     $http.get("quiz_choices.json").success(function (response) {
         $scope.quizzes = response;
-        $scope.selectedQuiz = $scope.quizzes[0];
+        // $scope.selectedQuiz = $scope.quizzes[0];
         console.log(response);
     }).error(errorhandler);
 
