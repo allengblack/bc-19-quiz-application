@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+            <state relative-caret-position="315">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -36,8 +36,8 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="22" column="29" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="29" />
+            <state relative-caret-position="390">
+              <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc;n#errorhandler#0" expanded="false" />
               </folding>
@@ -45,27 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="got-quiz.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz_files/got-quiz.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="greek-quiz.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/quiz_files/greek-quiz.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="11" selection-start-line="15" selection-start-column="11" selection-end-line="15" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="quiz_choices.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quiz_choices.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quiz_choices.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="60">
@@ -104,8 +84,8 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/quiz_files/got-quiz.json" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/quiz_choices.json" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -281,15 +261,15 @@
       <workItem from="1472027976431" duration="7777000" />
       <workItem from="1472036934782" duration="2451000" />
       <workItem from="1472040876730" duration="796000" />
-      <workItem from="1472053346572" duration="2499000" />
+      <workItem from="1472053346572" duration="3817000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30395000" />
+    <option name="totallyTimeSpent" value="31713000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="28" y="18" width="1338" height="750" extended-state="6" />
+    <frame x="28" y="18" width="1338" height="750" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.151101" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -541,28 +521,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/quiz_choices.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="39" column="7" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
+        <state relative-caret-position="60">
+          <caret line="4" column="250" selection-start-line="4" selection-start-column="250" selection-end-line="4" selection-end-column="250" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="22" column="29" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="29" />
+        <state relative-caret-position="390">
+          <caret line="28" column="3" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
           <folding>
             <element signature="n#!!doc;n#errorhandler#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz_choices.json">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="250" selection-start-line="4" selection-start-column="250" selection-end-line="4" selection-end-column="250" />
+        <state relative-caret-position="315">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
           <folding />
         </state>
       </provider>
