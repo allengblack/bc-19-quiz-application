@@ -1,6 +1,6 @@
 {
   "quiz": {
-    "isTimed": "true",
+    "isTimed": 30,
     "questions": [
       {
         "text": "Is hot water hot?",

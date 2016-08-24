@@ -4,23 +4,37 @@
     <meta charset="UTF-8">
     <title>Quiz Application</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" type="text/css" />
+    <style>
+        .quiz-logo {
+            width: 25%;
+            height: auto;
+        }
+    </style>
 </head>
 <body ng-app="quiz-app">
 
-<p ng-controller="QuizCtrl">
+<div ng-controller="QuizCtrl" class="container">
     <h1>Hello!</h1>
-    <p>Welcome to the Quiz App. </p>
-    <p>Select a quiz from the list below</p>
-    <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes"></select>
+    <p>
+        Welcome to the Quiz App.
+        <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes" ng-change="selectQuiz()"></select>
+    </p>
+
     <div>
-        <p>{{selectedQuiz.title}}</p>
+        <p>
+            <label>Title:</label>
+            {{selectedQuiz.title}}
+        </p>
+        <p>
+            <label>Description:</label>
+            {{selectedQuiz.description}}
+        </p>
+        <img ng-src="{{selectedQuiz.logo}}" class="img img-responsive quiz-logo" />
     </div>
 </div>
 
-<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
-<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
