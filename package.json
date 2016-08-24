@@ -18,6 +18,10 @@
   "homepage": "https://github.com/allengblack/bc-19-quiz-application#readme",
   "devDependencies": {
     "angular": "^1.5.8",
-    "mocha": "^3.0.2"
+    "angular-ui-bootstrap": "^2.1.2",
+    "bootstrap": "^3.3.7",
+    "install": "^0.8.1",
+    "mocha": "^3.0.2",
+    "npm": "^3.10.6"
   }
 }
