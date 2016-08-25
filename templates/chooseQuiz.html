@@ -1,0 +1,30 @@
+<!--chooseQuiz.html-->
+
+<style>
+    .quiz-logo {
+        width: 25%;
+        height: auto;
+
+    }
+</style>
+
+<div class="jumbotron text-center" ng-controller="QuizListCtrl">
+
+    <p>Choose a quiz from the menu below to get started.</p>
+    <br />
+    <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes" ng-change="selectQuiz()"></select>
+    <!--<p class="quiz-select" ng-options="quiz as quiz.title for quiz in quizzes"> </p>-->
+
+    <div>
+        <p>
+            <label>Title:</label>
+            <a ui-sref="Choose A Quiz">{{selectedQuiz.title}}</a>
+        </p>
+
+        <p>
+            <label>Description:</label>
+            {{selectedQuiz.description}}
+        </p>
+        <img ng-src="{{selectedQuiz.logo}}" class="img img-responsive quiz-logo" />
+    </div>
+</div>
