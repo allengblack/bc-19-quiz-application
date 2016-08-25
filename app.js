@@ -3,75 +3,57 @@ function errorhandler (err, obj) {
     console.error(err, obj);
 }
 
-var scotchApp = angular.module('scotchApp', []);
+var quizApp = angular.module('quizApp', ['ui.router']);
 
-scotchApp.controller('MainCtrl', function($scope) {
-    $scope.message = "Welcome to the Quiz App!";
+quizApp.config(function ($stateProvider){
+    $stateProvider.state('Home', {
+        url: '',
+        templateUrl: 'templates/home.html',
+        controller: 'MainCtrl'
+    });
+
+    $stateProvider.state('Choose A Quiz', {
+        url: '/chooseQuiz',
+        templateUrl: 'templates/chooseQuiz.html',
+        controller: 'QuizListCtrl'
+    });
+
+    $stateProvider.state('Upload new Quiz', {
+        url: '/uploadQuiz',
+        templateUrl: 'templates/uploadQuiz.html',
+        controller: 'UploadCtrl'
+    });
 });
 
+quizApp.controller('MainCtrl', function($scope) {
+    $scope.mainMessage = "Welcome to the Quiz App!";
+    $scope.headerMessage = "Test your knowledge of trivia here! You could also add your own quizzes " +
+        "and challenge your friends. Let's give it a go!";
+});
 
+quizApp.controller('QuizCtrl', function($scope) {
+    //
+});
 
+quizApp.controller('QuizListCtrl', function($scope, $http) {
+    $scope.quizzes = [];
+    $scope.message = "Select one of the quizzes.";
 
+    $scope.selectQuiz = function ($scope) {
+        //get the json data from the selected quiz url
+        $http.get($scope.selectedQuiz.dataUrl).success(function (response) {
+            $scope.quiz = response;
+            console.log(response);
+        }).error(errorhandler);
+    };
 
+    $http.get("quiz_choices.json").success(function (response) {
+        $scope.quizzes = response;
+        $scope.selectedQuiz = $scope.quizzes[0];
+        console.log(response);
+    }).error(errorhandler);
+});
 
-
-
-
-
-// /**
-//  * Created by g-man on 8/24/16.
-//  */
-// function errorhandler (err, obj) {
-//     //a global error handler
-//     console.error(err, obj);
-// }
-//
-// var app = angular.module("quiz-app", ['ngRoute']);
-//
-// app.controller('MainCtrl', function($scope) {
-//     $scope.message = "Hello, welcome to the Quiz App.";
-//
-// });
-//
-// app.controller('UploadCtrl', function($scope) {
-//     $scope.message = "Hello, welcome to the Quiz App.";
-//
-// });
-//
-// app.controller("QuizCtrl", function($scope, $sce, $http) {
-//     $scope.quizzes = [];
-//     $scope.message = "Select one of the quizzes.";
-//
-//     $scope.selectQuiz = function () {
-//         //get the json data from the selected quiz url
-//         $http.get($scope.selectedQuiz.dataUrl).success(function (response) {
-//             $scope.quiz = response;
-//             console.log(response);
-//         }).error(errorhandler);
-//     };
-//
-//     $http.get("quiz_choices.json").success(function (response) {
-//         $scope.quizzes = response;
-//         // $scope.selectedQuiz = $scope.quizzes[0];
-//         console.log(response);
-//     }).error(errorhandler);
-//
-// });
-//
-// app.config(function($routeProvider) {
-//     $routeProvider
-//         .when('/', {
-//             templateUrl : 'templates/home.html',
-//             controller : 'MainCtrl'
-//         })
-//
-//         .when('/takeQuiz', {
-//             templateUrl : 'TakeQuiz.html',
-//             controller : 'QuizCtrl'
-//         })
-//
-//         .when('/uploadQuiz', {
-//             templateUrl : 'uploadQuiz.html',
-//             controller : 'UploadCtrl'
-//         })
-// });
+quizApp.controller('UploadCtrl', function($scope) {
+    $scope.message = "I am the Upload Page. Work on me!";
+});
