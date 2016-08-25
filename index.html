@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Quiz Application</title>
@@ -12,27 +13,51 @@
         }
     </style>
 </head>
+
 <body ng-app="quiz-app">
 
 <div ng-controller="QuizCtrl" class="container">
-    <h1>Hello!</h1>
-    <p>
-        Welcome to the Quiz App.
-        <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes" ng-change="selectQuiz()"></select>
-    </p>
 
-    <div>
-        <p>
-            <label>Title:</label>
-            <a href="#">{{selectedQuiz.title}}</a>
+    <header>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <p class="navbar-brand">{{message}}</p>
+                </div>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
+                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
+                    <li><a href="#contact"><i class="fa fa-comment"></i> Take the quiz!</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT AND INJECTED VIEWS -->
+    <div id="main">
+
+        <!-- angular templating -->
+        <!-- this is where content will be injected -->
+        <div ng-view>
+        <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes" ng-change="selectQuiz()"></select>
         </p>
-        <p>
-            <label>Description:</label>
-            {{selectedQuiz.description}}
-        </p>
-        <img ng-src="{{selectedQuiz.logo}}" class="img img-responsive quiz-logo" />
+
+        <div>
+            <p>
+                <label>Title:</label>
+                <a href="#">{{selectedQuiz.title}}</a>
+            </p>
+            <p>
+                <label>Description:</label>
+                {{selectedQuiz.description}}
+            </p>
+            <img ng-src="{{selectedQuiz.logo}}" class="img img-responsive quiz-logo" />
+        </div>
+        </div>
     </div>
-</div>
+
+    </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>
 <script src="app.js"></script>
