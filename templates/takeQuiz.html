@@ -1,0 +1,19 @@
+<!--takeQuiz.html-->
+
+
+<div class="jumbotron text-center">
+
+    <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes" ng-change="selectQuiz()"></select>
+
+    <div>
+        <p>
+            <label>Title:</label>
+            <a href="#">{{selectedQuiz.title}}</a>
+        </p>
+        <p>
+            <label>Description:</label>
+            {{selectedQuiz.description}}
+        </p>
+        <img ng-src="{{selectedQuiz.logo}}" class="img img-responsive quiz-logo" />
+    </div>
+</div>
