@@ -1,13 +1,21 @@
 /**
  * Created by g-man on 8/24/16.
  */
-
 function errorhandler (err, obj) {
     //a global error handler
     console.error(err, obj);
 }
 
-var app = angular.module("quiz-app", []);
+var app = angular.module("quiz-app", ['ngRoute']);
+
+app.controller('MainCtrl', function ($scope) {
+    $scope.message = "Hello, welcome to the Quiz App.";
+});
+
+app.controller('MainCtrl', function ($scope) {
+    $scope.message = "Hello, welcome to the Quiz App.";
+});
+
 
 app.controller("QuizCtrl", function ($scope, $sce, $http) {
     $scope.quizzes = [];
@@ -26,4 +34,17 @@ app.controller("QuizCtrl", function ($scope, $sce, $http) {
         console.log(response);
     }).error(errorhandler);
 
+});
+
+app.config(function($routeProvider) {
+    $routeProvider
+        .when('/', {
+            templateUrl : 'index.html',
+            controller : 'MainCtrl'
+        })
+
+        .when('/takeQuiz', {
+            templateUrl : 'quiz.html',
+            controller : 'QuizCtrl'
+        })
 });
