@@ -23,6 +23,12 @@ quizApp.config(function ($stateProvider){
         templateUrl: 'templates/uploadQuiz.html',
         controller: 'UploadCtrl'
     });
+
+    $stateProvider.state('Start Quiz', {
+        url: '/chooseQuiz/startQuiz',
+        templateUrl: 'templates/quiz.html',
+        controller: 'QuizCtrl'
+    });
 });
 
 quizApp.controller('MainCtrl', function($scope) {
@@ -32,7 +38,7 @@ quizApp.controller('MainCtrl', function($scope) {
 });
 
 quizApp.controller('QuizCtrl', function($scope) {
-    //
+    $scope.message = "I'm the quiz, bitch. Fear me.";
 });
 
 quizApp.controller('QuizListCtrl', function($scope, $http) {
