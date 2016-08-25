@@ -1,30 +1,33 @@
 <!--chooseQuiz.html-->
-
 <style>
     .quiz-logo {
-        width: 25%;
-        height: auto;
+        width: 150px !important;
+        height: 120px !important;
+    }
 
+    .pad-20 {
+        padding: 20px;
     }
 </style>
 
-<div class="jumbotron text-center" ng-controller="QuizListCtrl">
+<div class="jumbotron" ng-controller="QuizListCtrl">
 
-    <p>Choose a quiz from the menu below to get started.</p>
+    <p class="text-center">Choose a quiz from the menu below to get started.</p>
     <br />
-    <select class="quiz-select" ng-model="selectedQuiz" ng-options="quiz as quiz.title for quiz in quizzes" ng-change="selectQuiz()"></select>
-    <!--<p class="quiz-select" ng-options="quiz as quiz.title for quiz in quizzes"> </p>-->
-
-    <div>
-        <p>
-            <label>Title:</label>
-            <a ui-sref="Choose A Quiz">{{selectedQuiz.title}}</a>
-        </p>
-
-        <p>
-            <label>Description:</label>
-            {{selectedQuiz.description}}
-        </p>
-        <img ng-src="{{selectedQuiz.logo}}" class="img img-responsive quiz-logo" />
+    <div class="row">
+        <div class="col-sm-12 pad-20" ng-repeat="quiz in quizzes">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img ng-src="{{quiz.logo}}" class="img img-responsive quiz-logo" />
+                </div>
+                <div class="col-sm-9">
+                    <h4>{{quiz.title}}</h4>
+                    <p>{{quiz.description}}</p>
+                </div>
+                <div class="col-sm-1">
+                    <a class="btn btn-default" ui-sref="Start Quiz">Start Quiz</a>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
