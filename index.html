@@ -1,6 +1,6 @@
 <!-- index.html -->
 <!DOCTYPE html>
-<html ng-app="scotchApp">
+<html ng-app="quizApp">
 <head>
     <!-- SCROLLS -->
     <!-- load bootstrap and fontawesome via CDN -->
@@ -10,90 +10,33 @@
     <!-- SPELLS -->
     <!-- load angular and angular route via CDN -->
     <script src="/node_modules/angular/angular.min.js"></script>
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
+    <!--<base href="/">-->
 </head>
 
-<body ng-controller="MainCtrl">
+<body >
     <header>
-        <nav class="navbar navbar-default">
-            <div class="container">
-                <div class="navbar-header">
-                    <a class="navbar-brand" href="/">{{message}}</a>
+        <div >
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="/" ng-controller="MainCtrl">{{mainMessage}}</a>
+                    </div>
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a ui-sref="Home"> Home</a></li>
+                        <li><a ui-sref="Choose A Quiz"> Take The Quiz</a></li>
+                        <li><a ui-sref="Upload new Quiz"> Upload a new Quiz.</a></li>
+                    </ul>
                 </div>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><i class="fa fa-home"></i> Home</a></li>
-                    <li><a href="#about"><i class="fa fa-shield"></i> About</a></li>
-                    <li><a href="#contact"><i class="fa fa-comment"></i> Contact</a></li>
-                </ul>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
-
-<!-- MAIN CONTENT AND INJECTED VIEWS -->
-    <div id="main">
-
-        <!-- angular templating -->
-        <!-- this is where content will be injected -->
-
-    </div>
+    <ui-view>
+        Loading...
+    </ui-view>
 
 </body>
 
 </html>
-
-
-
-
-<!--<!DOCTYPE html>-->
-<!--<html lang="en">-->
-
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>Quiz Application</title>-->
-    <!--<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">-->
-    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" type="text/css" />-->
-    <!--<style>-->
-        <!--.quiz-logo {-->
-            <!--width: 25%;-->
-            <!--height: auto;-->
-        <!--}-->
-    <!--</style>-->
-<!--</head>-->
-
-<!--<body ng-app="quiz-app">-->
-
-<!--<div ng-controller="MainCtrl" class="container">-->
-    <!--<header>-->
-        <!--<nav class="navbar navbar-default">-->
-            <!--<div class="container">-->
-                <!--<div class="navbar-header">-->
-                    <!--<a class="navbar-brand" href="/">{{message}}</a>-->
-                <!--</div>-->
-
-                <!--<ul class="nav navbar-nav navbar-right">-->
-                    <!--<li><a href="#"><i class="fa fa-home"></i> Home</a></li>-->
-                    <!--<li><a href="templates/takeQuiz.html"><i class="fa fa-shield"></i> Take the Quiz!</a></li>-->
-                    <!--<li><a href="templates/uploadQuiz.html"><i class="fa fa-comment"></i> Upload a new quiz.</a></li>-->
-                <!--</ul>-->
-            <!--</div>-->
-        <!--</nav>-->
-    <!--</header>-->
-
-    <!--&lt;!&ndash; MAIN CONTENT AND INJECTED VIEWS &ndash;&gt;-->
-    <!--<div id="main">-->
-
-        <!--&lt;!&ndash; angular templating &ndash;&gt;-->
-        <!--&lt;!&ndash; this is where content will be injected &ndash;&gt;-->
-
-
-    <!--</div>-->
-
-
-<!--</div>-->
-
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.min.js"></script>-->
-<!--<script src="app.js"></script>-->
-<!--</body>-->
-<!--</html>-->
-
