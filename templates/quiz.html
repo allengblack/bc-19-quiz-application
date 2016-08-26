@@ -2,6 +2,17 @@
 
 
 <div class="jumbotron text-center">
+    <div class="score-display"> Your current score is : {{live-score}}</div>
+
+    <div class="q-and-a">
+        <div class="question">{{question}}</div>
+
+        <div class="col-md-3" ng-repeat="x in [0,1,2,3]">{{options[x]}}</div>
+        <!--<div class="col-md-3" >Option b</div>-->
+        <!--<div class="col-md-3" >Option c</div>-->
+        <!--<div class="col-md-3" >Option d</div>-->
+    </div>
+
     <p>{{message}}</p>
 </div>
 

@@ -37,8 +37,24 @@ quizApp.controller('MainCtrl', function($scope) {
         "and challenge your friends. Let's give it a go!";
 });
 
-quizApp.controller('QuizCtrl', function($scope) {
+quizApp.controller('QuizCtrl', function($scope, $http) {
     $scope.message = "I'm the quiz, bitch. Fear me.";
+    $scope.question = "I asked a question";
+
+    $scope.options = [
+        "Option A",
+        "Option B",
+        "Option C",
+        "Option D"
+    ];
+
+    $http.get("quiz_files/").success(function (response) {
+        //
+    }).error(errorhandler);
+    // $http.get(url).success(function (data) {
+    //     //assign data to some scope variable
+    // }).error(errorhandler);
+
 });
 
 quizApp.controller('QuizListCtrl', function($scope, $http) {
