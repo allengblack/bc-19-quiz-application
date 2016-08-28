@@ -30,7 +30,7 @@
                     <p>{{quiz.description}}</p>
                 </div>
                 <div class="col-sm-1">
-                    <a class="btn btn-default" ui-sref="Start Quiz">Start Quiz</a>
+                    <a class="btn btn-default" ui-sref="Start Quiz" ng-click="setUrlString(quiz.dataUrl)">Start Quiz</a>
                 </div>
             </div>
         </div>
