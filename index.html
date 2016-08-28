@@ -1,17 +1,15 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html ng-app="quizApp">
+
 <head>
-    <!-- SCROLLS -->
-    <!-- load bootstrap and fontawesome via CDN -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" type="text/css" />
 
-    <!-- SPELLS -->
-    <!-- load angular and angular route via CDN -->
     <script src="/node_modules/angular/angular.min.js"></script>
     <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="app.js"></script>
+    <script src="factories/metrics.js"></script>
     <!--<base href="/">-->
 </head>
 
@@ -21,7 +19,7 @@
             <nav class="navbar navbar-default">
                 <div class="container">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="/" ng-controller="MainCtrl">{{mainMessage}}</a>
+                        <p class="navbar-brand" ng-controller="MainCtrl">{{mainMessage}}</p>
                     </div>
 
                     <ul class="nav navbar-nav navbar-right">
