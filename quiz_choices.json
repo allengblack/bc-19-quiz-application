@@ -1,6 +1,24 @@
 [
-  { "id" : 0, "title": "World War II", "description": "How much do you know about the events leading to, during and after the rise of Nazi Germany?", "logo": "http://i2.kym-cdn.com/entries/icons/original/000/008/940/world-war-2.png", "dataUrl": "quiz_files/world-war.json"},
-  { "id" : 1, "title": "Fall of the Roman Empire", "description": "Senatus Populusque Romanus!", "logo": "http://www.proprofs.com/quiz-school/topic_images/p1a5j65ha8r9umci11m9frg1pl3.jpg", "dataUrl": "quiz_files/roman-quiz.json"},
-  { "id" : 2, "title": "Greek Mythology", "description": "Zeus, Hades, Poseidon!!!", "logo": "https://s-media-cache-ak0.pinimg.com/736x/f2/89/84/f28984a535b6738c11fd7547c90ae142.jpg", "dataUrl": "quiz_files/greek-quiz.json"},
-  { "id" : 3, "title": "Game of Thrones", "description": "Think you know what's going on in Westeros, Bravos and beyond the wall? Find out for sure here. ", "logo": "http://media.moddb.com/images/members/1/123/122021/profile/c9lzmv4d3mgzpnyntz7s.jpg", "dataUrl": "quiz_files/got-quiz.json"}
+  { "id" : 0,
+    "title": "World War II",
+    "description": "How much do you know about the events leading to, during and after the rise of Nazi Germany?",
+    "logo": "http://i2.kym-cdn.com/entries/icons/original/000/008/940/world-war-2.png",
+    "dataUrl": "quiz_files/world-war.json"},
+
+  { "id" : 1, "title": "Fall of the Roman Empire",
+    "description": "Senatus Populusque Romanus!",
+    "logo": "http://www.proprofs.com/quiz-school/topic_images/p1a5j65ha8r9umci11m9frg1pl3.jpg",
+    "dataUrl": "quiz_files/roman-quiz.json"},
+
+  { "id" : 2,
+    "title": "Greek Mythology",
+    "description": "Zeus, Hades, Poseidon!!!",
+    "logo": "https://s-media-cache-ak0.pinimg.com/736x/f2/89/84/f28984a535b6738c11fd7547c90ae142.jpg",
+    "dataUrl": "quiz_files/greek-quiz.json"},
+
+  { "id" : 3,
+    "title": "Game of Thrones",
+    "description": "Think you know what's going on in Westeros, Bravos and beyond the wall? Find out for sure here.",
+    "logo": "http://media.moddb.com/images/members/1/123/122021/profile/c9lzmv4d3mgzpnyntz7s.jpg",
+    "dataUrl": "quiz_files/got-quiz.json"}
 ]

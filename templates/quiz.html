@@ -2,9 +2,29 @@
 
 
 <div class="jumbotron text-center">
-    <p>{{message}}</p>
+    <!--<div class="q-and-a col-md-1" > Score is 0 </div>-->
+    <!--<h2 class="col-md-11" align="center" >Here we GO!</h2>-->
+
+    <!--<div class="q-and-a">-->
+        <div class="row" ng-repeat="question in newQuiz">
+            <h3 class="well well-md">Question: {{$index+1}}</h3>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h4>{{question.text}}</h4>
+                        <div class="row">
+                            <div class="" ng-repeat="question in newQuiz" >
+                                <a class="btn btn-default" ng-click="">{{question.text}}</a>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!--<div class="col-md-3" >Option b</div>-->
+        <!--<div class="col-md-3" >Option c</div>-->
+        <!--<div class="col-md-3" >Option d</div>-->
+    <!--</div>-->
+
+    <!--<p>{{message}}</p>-->
 </div>
-
-
-
-

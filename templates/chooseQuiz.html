@@ -11,11 +11,16 @@
 </style>
 
 <div class="jumbotron" ng-controller="QuizListCtrl">
+    <h2 class="text-center col-md=9 ">Choose a quiz from the menu below to get started.</h2>
 
-    <p class="text-center">Choose a quiz from the menu below to get started.</p>
+    <form class="searchbox form-inline well well-md clearfix row-md=9">
+        <span class="glyphicon glyphicon-search"></span>
+        <input type="text" placeholder="Search" class="form-control" ng-model="QuizListCtrl.search" />
+    </form>
+
     <br />
     <div class="row">
-        <div class="col-sm-12 pad-20" ng-repeat="quiz in quizzes">
+        <div class="col-sm-12 pad-20" ng-repeat="quiz in quizzes | filter:QuizListCtrl.search">
             <div class="row">
                 <div class="col-sm-2">
                     <img ng-src="{{quiz.logo}}" class="img img-responsive quiz-logo" />
