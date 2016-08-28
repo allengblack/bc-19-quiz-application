@@ -65,6 +65,15 @@ quizApp.controller('QuizCtrl', function($scope, $http) {
     $scope.newQuiz = {};
     $scope.questions = [];
     $scope.options = [];
+    $scope.correctCount = 0;
+
+    $scope.correctCounter = function (index) {
+        for(var i=0; $scope.newQuiz.options.length(); i++) {
+            if ($scope.newQuiz.options[index].isCorrect === true)
+            $scope.correctCount++;
+        index++;
+        }
+    };
 
     $http.get("/quiz_files/got-quiz.json").success(function (response) {
         $scope.newQuiz = response;
