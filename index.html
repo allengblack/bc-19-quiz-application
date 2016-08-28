@@ -1,3 +1,10 @@
+<style>
+    .navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}
+</style>
+
 <!-- index.html -->
 <!DOCTYPE html>
 <html ng-app="quizApp">
@@ -20,13 +27,23 @@
                 <div class="container">
                     <div class="navbar-header">
                         <p class="navbar-brand" ng-controller="MainCtrl">{{mainMessage}}</p>
+                        <img align="left" height="200px" width="50%" src="Quiz-Games-red.png">
                     </div>
-
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a ui-sref="Home"> Home</a></li>
-                        <li><a ui-sref="Choose A Quiz"> Take A Quiz</a></li>
-                        <li><a ui-sref="Upload new Quiz"> Upload a new Quiz.</a></li>
-                    </ul>
+                    <div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <div ><span class="glyphicon glyphicon-home"></span><a ui-sref="Home"> Home</a></div>
+                            </li>
+                            <li>
+                                <div ><span class="glyphicon glyphicon-hourglass"></span><a ui-sref="Choose A Quiz"> Take A Quiz</a></div>
+                            </li>
+                            <li>
+                                <div ><span class="glyphicon glyphicon-upload"></span><a ui-sref="Upload new Quiz"> Upload a new Quiz.</a></div>
+                            </li>
+                            <!--<li><a ui-sref="Choose A Quiz"> Take A Quiz</a></li>-->
+                            <!--<li><a ui-sref="Upload new Quiz"> Upload a new Quiz.</a></li>-->
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
