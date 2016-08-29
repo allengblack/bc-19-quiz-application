@@ -3,6 +3,6 @@
  */
 
 
-quizApp.controller('UploadCtrl', function($scope) {
+quizApp.controller('DownloadCtrl', function($scope) {
     $scope.templateUrl = '/quiz_files/template.json';
 });
