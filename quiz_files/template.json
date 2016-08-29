@@ -1,0 +1,22 @@
+[
+  {
+    "text": "Enter questions here. Enter as many as you like.",
+    "options": [
+      {
+        "text": "Option A",
+        "isCorrect": false
+      },
+      {
+        "text": "Option B",
+        "isCorrect": true
+      },
+      {
+        "text": "Option C",
+        "isCorrect": false
+      },
+      {
+        "text": "Option D",
+        "isCorrect": false
+      }]
+  }
+]

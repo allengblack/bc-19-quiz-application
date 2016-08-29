@@ -1,0 +1,7 @@
+.highlight {
+    background-color: blue;
+}
+
+.quizbutton {
+    pointer-events: none;
+}

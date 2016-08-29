@@ -38,6 +38,7 @@ quizApp.config(function ($locationProvider, $stateProvider){
         templateUrl: 'templates/displayScore.html',
         controller: 'DisplayCtrl'
     });
+
 });
 
 quizApp.service('QuizServiceData', function () {
