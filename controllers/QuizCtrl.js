@@ -1,6 +1,6 @@
-/**
- * Created by g-man on 8/28/16.
- */
+// /**
+//  * Created by g-man on 8/28/16.
+//  */
 
 function errorhandler (err, obj) {
     //a global error handler
@@ -14,11 +14,18 @@ quizApp.controller('QuizCtrl', function($scope, $http, QuizServiceData) {
     $scope.score = null;
     $scope.urlString = QuizServiceData.getUrl();
 
-    $scope.increaseScore = function (question) {
-        if (question.isCorrect){
-            $scope.score++;
+    $scope.increaseScore = function (question, option) {
+        question.correct = false;
+        question.options.forEach(function (option) {
+            option.answered = false;
+        });
+        option.answered = true;
+        if (option.isCorrect) {
+            question.correct = true;
+            //$scope.score++;
             console.log($scope.score);
         }
+        console.log(question, option);
     };
 
     $scope.getScore = function () {
@@ -30,6 +37,11 @@ quizApp.controller('QuizCtrl', function($scope, $http, QuizServiceData) {
     };
 
     $scope.setFinalScore = function () {
+        //console.log($scope.newQuiz);
+        $scope.score = 0;
+        $scope.newQuiz.forEach(function (question) {
+            if (question.correct) $scope.score++;
+        });
         QuizServiceData.setFinalScore($scope.score);
     };
 
