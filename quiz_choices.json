@@ -3,7 +3,7 @@
     "title": "World War II",
     "description": "How much do you know about the events leading to, during and after the rise of Nazi Germany?",
     "logo": "http://i2.kym-cdn.com/entries/icons/original/000/008/940/world-war-2.png",
-    "dataUrl": "quiz_files/world-war.json"},
+    "dataUrl": "quiz_files/world-war-quiz.json"},
 
   { "id" : 1, "title": "Fall of the Roman Empire",
     "description": "Senatus Populusque Romanus!",
