@@ -3,7 +3,6 @@
 //  */
 
 function errorhandler (err, obj) {
-    //a global error handler
     console.error(err, obj);
 }
 
