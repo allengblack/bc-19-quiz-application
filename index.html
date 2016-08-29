@@ -1,18 +1,30 @@
+<style>
+    .navbar-nav > li{
+    padding-left:30px;
+    padding-right:30px;
+}
+</style>
+
 <!-- index.html -->
 <!DOCTYPE html>
 <html ng-app="quizApp">
+
 <head>
-    <!-- SCROLLS -->
-    <!-- load bootstrap and fontawesome via CDN -->
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" type="text/css" />
 
-    <!-- SPELLS -->
-    <!-- load angular and angular route via CDN -->
     <script src="/node_modules/angular/angular.min.js"></script>
     <script src="/node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="app.js"></script>
-    <!--<base href="/">-->
+    <script src="global.js"></script>
+
+    <!--<script src="factories/metrics.js"></script>-->
+    <script src="controllers/QuizCtrl.js"></script>
+    <script src="controllers/QuizListCtrl.js"></script>
+    <script src="controllers/MainCtrl.js"></script>
+    <script src="controllers/DisplayCtrl.js"></script>
+
+    <base href="/">
+
 </head>
 
 <body >
@@ -20,21 +32,35 @@
         <div >
             <nav class="navbar navbar-default">
                 <div class="container">
+                    <a ui-sref="Home"><img align="left" height="100px" width="100" src="Quiz-Games-red.png"></a>
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="/" ng-controller="MainCtrl">{{mainMessage}}</a>
-                    </div>
+                        <p class="navbar-brand" ng-controller="MainCtrl">{{mainMessage}}</p>
 
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a ui-sref="Home"> Home</a></li>
-                        <li><a ui-sref="Choose A Quiz"> Take The Quiz</a></li>
-                        <li><a ui-sref="Upload new Quiz"> Upload a new Quiz.</a></li>
-                    </ul>
+                    </div>
+                    <div class="navbar-brand">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li>
+                                <div><span class="glyphicon glyphicon-home"></span>
+                                    <a ui-sref="Home"> Home</a></div>
+                            </li>
+                            <li>
+                                <div><span class="glyphicon glyphicon-hourglass"></span>
+                                    <a ui-sref="Choose A Quiz"> Take A Quiz</a></div>
+                            </li>
+                            <li>
+                                <div><span class="glyphicon glyphicon-upload"></span>
+                                    <a ui-sref="Download"> Upload a new Quiz.</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
     </header>
+
     <ui-view>
-        Loading...
+        <h2>Loading...</h2>
     </ui-view>
 
 </body>
