@@ -88,45 +88,44 @@
   }
   ]
 }, {
-    "text": "'Reek' was born into which house?",
+    "text": "Who kills Ramsey Bolton",
     "options": [
       {
-        "text": "House Stark",
-        "isCorrect": false
-      },
-      {
-        "text": "House Greyjoy",
+        "text": "Jon Snow",
         "isCorrect": true
       },
       {
-        "text": "House Mormont",
+        "text": "Jorah Mormont",
         "isCorrect": false
       },
       {
-        "text": "House Martell",
+        "text": "Arya Stark",
+        "isCorrect": false
+      },
+      {
+        "text": "Walden Frey",
         "isCorrect": false
       }
-      ],
-        "selected": ""
+      ]
   },
   {
-    "text": "Which of these led to the death of Daenerys Targaryen’s husband Khal Drogo?",
+    "text": "Where is direction is Winterfell from Dorne?",
     "options": [{
-      "text": "Poison",
+      "text": "South",
       "isCorrect": false
     }, {
-      "text": "Crossbow",
+      "text": "West",
       "isCorrect": false
     }, {
-      "text": "Festering wound",
+      "text": "North",
       "isCorrect": true
     }, {
-      "text": "Trampling horses",
+      "text": "East",
       "isCorrect": false
     }]
   },
   {
-    "text": "Who said \"a lion doesn't concern himself with the opinions of a sheep\"?",
+    "text": "Who does Tyrion Lannister kill with a crossbow bolt?",
     "options": [{
       "text": "Jamie Lannister",
       "isCorrect": false
@@ -142,38 +141,38 @@
     }]
   },
   {
-    "text": "What was Sansa Stark's dire wolf named?",
+    "text": "What is Jon Snow's dire wolf named?",
     "options": [{
       "text": "Girl",
       "isCorrect": false
     }, {
       "text": "Ghost",
-      "isCorrect": false
+      "isCorrect": true
     }, {
       "text": "Princess",
       "isCorrect": false
     }, {
       "text": "Lady",
-      "isCorrect": true
+      "isCorrect": false
     }]
   },
   {
-    "text": "The Hound is critically wounded in a battle with whom?",
+    "text": "The king at King's Landing is the king of ___ kingdoms.",
     "options": [
       {
-        "text": "Arya Stark",
+        "text": "Nine",
         "isCorrect": false
       },
       {
-        "text": "Ser Gregor Clegane",
+        "text": "Thirteen",
         "isCorrect": false
       },
       {
-        "text": "Brienne of Tarth",
+        "text": "Seven",
         "isCorrect": true
       },
       {
-        "text": "Thoros of Myr",
+        "text": "One",
         "isCorrect": false
       }
     ]
