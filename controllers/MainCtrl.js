@@ -9,6 +9,5 @@ function errorhandler (err, obj) {
 
 quizApp.controller('MainCtrl', function($scope) {
     $scope.mainMessage = "Welcome to the Quiz App!";
-    $scope.headerMessage = "Test your knowledge of trivia here! You could also add your own quizzes " +
-        "and challenge your friends. Let's give it a go!";
+    $scope.headerMessage = "Test your knowledge of trivia here! \n Let's give it a go!";
 });

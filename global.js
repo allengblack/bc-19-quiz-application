@@ -24,7 +24,7 @@ quizApp.config(function ($locationProvider, $stateProvider){
     $stateProvider.state('Download', {
         url: '/download',
         templateUrl: 'templates/downloadQuiz.html',
-        controller: 'UploadCtrl'
+        controller: 'DownloadCtrl'
     });
 
     $stateProvider.state('Start Quiz', {
