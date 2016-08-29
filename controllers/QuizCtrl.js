@@ -11,12 +11,14 @@ quizApp.controller('QuizCtrl', function($scope, $http, QuizServiceData) {
     $scope.newQuiz = {};
     $scope.isActive = true;
     $scope.options = {};
-    $scope.score = 0;
+    $scope.score = null;
     $scope.urlString = QuizServiceData.getUrl();
 
     $scope.increaseScore = function (question) {
-        if (question[0] === true)
-            $scope.score = $scope.score + 1;
+        if (question.isCorrect){
+            $scope.score++;
+            console.log($scope.score);
+        }
     };
 
     $scope.getScore = function () {
@@ -33,7 +35,7 @@ quizApp.controller('QuizCtrl', function($scope, $http, QuizServiceData) {
 
     $http.get($scope.urlString).success(function (response) {
         $scope.newQuiz = response;
-        console.log(response);
+        // console.log(response);
     }).error(errorhandler);
 
 });

@@ -5,9 +5,12 @@ function errorhandler (err, obj) {
 
 var quizApp = angular.module('quizApp', ['ui.router']);
 
-quizApp.config(function ($stateProvider){
+
+quizApp.config(function ($locationProvider, $stateProvider){
+    $locationProvider.html5Mode(true);
+
     $stateProvider.state('Home', {
-        url: '',
+        url: '/',
         templateUrl: 'templates/home.html',
         controller: 'MainCtrl'
     });
@@ -18,9 +21,9 @@ quizApp.config(function ($stateProvider){
         controller: 'QuizListCtrl'
     });
 
-    $stateProvider.state('Upload new Quiz', {
-        url: '/uploadQuiz',
-        templateUrl: 'templates/uploadQuiz.html',
+    $stateProvider.state('Download', {
+        url: '/download',
+        templateUrl: 'templates/downloadQuiz.html',
         controller: 'UploadCtrl'
     });
 
